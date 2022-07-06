@@ -34,8 +34,11 @@ export default function Dragons() {
                 description={dragon.description}
                 img={dragon.img}
               />
-              <button className="reserveDragon" type="button" onClick={() => handleReserve(dragon.id)}>Reserve Dragon</button>
-              <button className="cancelDragon" type="button" onClick={() => handleUnreserve(dragon.id)}>Cancel Reservation</button>
+              {dragon.reserved ? (
+                <button className="cancelDragon" type="button" onClick={() => handleUnreserve(dragon.id)}>Cancel Reservation</button>
+              ) : (
+                <button className="reserveDragon" type="button" onClick={() => handleReserve(dragon.id)}>Reserve Dragon</button>
+              )}
             </div>
           ))
         }
