@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { ReserveRocket } from '../Redux/Rockets/Rockets';
+import { CancelReserve, ReserveRocket } from '../Redux/Rockets/Rockets';
 
 function Rocket(props) {
   const {
@@ -11,6 +11,10 @@ function Rocket(props) {
 
   const ReserveRocketHandler = () => {
     dispatch(ReserveRocket(id));
+  };
+
+  const CancelRocketHandler = () => {
+    dispatch(CancelReserve(id));
   };
 
   return (
@@ -36,8 +40,11 @@ function Rocket(props) {
         <button
           type="button"
           className="reservedBtn"
+          onClick={() => {
+            CancelRocketHandler();
+          }}
         >
-          It&apos;s Reserved
+          Cancel Reserve
         </button>
       )}
       {!reserved && (
