@@ -11,7 +11,9 @@ export default function NavBar() {
           <h1>Space Travelers&apos; Hub</h1>
         </div>
         <nav className="navBar">
-          <NavLink to="/">Missions</NavLink>
+          <NavLink to="/">Rockets</NavLink>
+          <NavLink to="/missions">Missions</NavLink>
+          <NavLink to="/dragons">Dragons</NavLink>
           <NavLink to="/myprofile">MyProfile</NavLink>
         </nav>
       </header>
