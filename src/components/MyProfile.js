@@ -1,10 +1,23 @@
+import React from 'react';
+import { useSelector } from 'react-redux';
 import NavBar from './navbar';
 
-export default function MyProfile() {
+function MyProfile() {
+  const dragon = useSelector((state) => state.dragons);
+  const dragonList = dragon.filter((item) => item.reserved === true);
   return (
-    <div>
+    <>
       <NavBar />
-      <h1>My Profile</h1>
-    </div>
+      <h1>My Dragons</h1>
+      <div>
+        {dragonList.map((item) => (
+          <div className="dragons-myprofile-item" key={item.id}>
+            <p>{item.name}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
+
+export default MyProfile;
