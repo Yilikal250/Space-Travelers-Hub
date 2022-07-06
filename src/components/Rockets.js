@@ -1,10 +1,10 @@
 import NavBar from './navbar';
 
-export default function MyProfile() {
+export default function Rockets() {
   return (
     <div>
       <NavBar />
-      <h1>My Profile</h1>
+      <h1>Rockets</h1>
     </div>
   );
 }
