@@ -1,10 +1,15 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import NavBar from './components/navbar';
+import MyProfile from './components/MyProfile';
+import Missions from './components/Missions';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
+    <div>
+      <Routes>
+        <Route path="/" element={<Missions />} />
+        <Route path="/myprofile" element={<MyProfile />} />
+      </Routes>
     </div>
   );
 }
