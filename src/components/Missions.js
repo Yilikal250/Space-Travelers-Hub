@@ -1,3 +1,4 @@
+import Mission from './mission';
 import NavBar from './navbar';
 
 export default function Missions() {
@@ -5,6 +6,7 @@ export default function Missions() {
     <div>
       <NavBar />
       <h1>Missions</h1>
+      <Mission />
     </div>
   );
 }
