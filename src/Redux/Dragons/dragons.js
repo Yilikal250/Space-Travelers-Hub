@@ -1,10 +1,15 @@
 const url = 'https://api.spacexdata.com/v3/dragons';
 const GETDRAGON = 'Space-Travelers-Hub22/dragons/GETDRAGON';
+const RESERVE_DRAGON = 'Space-Travelers-Hub22/dragons/RESERVE_DRAGON';
 
 function dragonsReducer(state = [], action) {
   switch (action.type) {
     case GETDRAGON:
       return [...action.dragons];
+    case RESERVE_DRAGON:
+      return state.map((item) => (
+        item.id === action.payload ? { ...item, reserved: true } : item
+      ));
     default:
       return state;
   }
@@ -13,6 +18,11 @@ function dragonsReducer(state = [], action) {
 const GetDragon = (dragons) => ({
   type: GETDRAGON,
   dragons,
+});
+
+export const reserveDragon = (id) => ({
+  type: RESERVE_DRAGON,
+  payload: id,
 });
 
 export const Fetchdragon = () => (dispatch) => {

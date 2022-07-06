@@ -1,11 +1,15 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { Fetchdragon } from '../Redux/Dragons/dragons';
+import { Fetchdragon, reserveDragon } from '../Redux/Dragons/dragons';
 import NavBar from './navbar';
 import Dragon from './Dragon';
 
 export default function Dragons() {
   const dragons = useSelector((state) => state.dragons);
   const dispatch = useDispatch();
+
+  const handleReserve = (id) => {
+    dispatch(reserveDragon(id));
+  };
 
   if (dragons.length === 0) {
     dispatch(Fetchdragon());
@@ -18,13 +22,16 @@ export default function Dragons() {
       <ul>
         {
           dragons.map((dragon) => (
-            <Dragon
-              key={dragon.id}
-              id={dragon.id}
-              name={dragon.name}
-              description={dragon.description}
-              img={dragon.img}
-            />
+            <div key={dragon.id}>
+              <Dragon
+                key={dragon.id}
+                id={dragon.id}
+                name={dragon.name}
+                description={dragon.description}
+                img={dragon.img}
+              />
+              <button className="reserveDragon" type="button" onClick={() => handleReserve(dragon.id)}>Reserve Dragon</button>
+            </div>
           ))
         }
       </ul>
