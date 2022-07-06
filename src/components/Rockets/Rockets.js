@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { FetchRocket } from '../Redux/Rockets/Rockets';
-import NavBar from './navbar';
+import { FetchRocket } from '../../Redux/Rockets/Rockets';
+import './Rockets.css';
+import NavBar from '../navbar';
 import Rocket from './rocket';
 
 export default function Rockets() {
@@ -14,8 +15,8 @@ export default function Rockets() {
   return (
     <div>
       <NavBar />
-      <h1>Rockets</h1>
-      <ul>
+      <h1 className="rocketTitle">Rockets</h1>
+      <ul className="rockets">
         {
           rockets.map((rocket) => (
             <Rocket
