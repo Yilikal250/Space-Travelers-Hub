@@ -1,29 +1,18 @@
-import React from 'react';
-import {
-  Route,
-  Routes,
-} from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import NavBar from './components/navbar';
 import MyProfile from './components/MyProfile';
+import Rockets from './components/Rockets';
 import Dragons from './components/Dragons';
 
 function App() {
   return (
-    <Provider>
-      <NavBar className="header" />
+    <div>
       <Routes>
-        <Route
-          path="/dragons"
-          element={<Dragons />}
-        />
-        <Route
-          path="/myprofile"
-          element={<MyProfile />}
-        />
+        <Route path="/" element={<Rockets />} />
+        <Route path="/dragons" element={<Dragons />} />
+        <Route path="/myprofile" element={<MyProfile />} />
       </Routes>
-    </Provider>
+    </div>
   );
 }
 
