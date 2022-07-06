@@ -30,13 +30,6 @@ export default function Missions() {
             <tr className="tableBody" key={mission.id}>
               <td className="missionTitle"><h1>{mission.name}</h1></td>
               <td className="mission-description"><p>{mission.description}</p></td>
-              <td className="missionStatus">
-                { mission.joined ? (
-                  <button className="member" type="button" onClick={() => handleLeave(mission.id)} disabled>Active Member</button>
-                ) : (
-                  <button className="notMember" type="button" onClick={() => handleJoin(mission.id)} disabled>NOT A MEMBER</button>
-                ) }
-              </td>
             </tr>
           ))
         }
