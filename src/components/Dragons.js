@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { Fetchdragon, reserveDragon } from '../Redux/Dragons/dragons';
+import { Fetchdragon, reserveDragon, unreserveDragon } from '../Redux/Dragons/dragons';
 import NavBar from './navbar';
 import Dragon from './Dragon';
 
@@ -9,6 +9,10 @@ export default function Dragons() {
 
   const handleReserve = (id) => {
     dispatch(reserveDragon(id));
+  };
+
+  const handleUnreserve = (id) => {
+    dispatch(unreserveDragon(id));
   };
 
   if (dragons.length === 0) {
@@ -31,6 +35,7 @@ export default function Dragons() {
                 img={dragon.img}
               />
               <button className="reserveDragon" type="button" onClick={() => handleReserve(dragon.id)}>Reserve Dragon</button>
+              <button className="cancelDragon" type="button" onClick={() => handleUnreserve(dragon.id)}>Cancel Reservation</button>
             </div>
           ))
         }
