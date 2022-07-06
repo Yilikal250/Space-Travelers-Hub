@@ -30,6 +30,11 @@ export const reserveDragon = (id) => ({
   payload: id,
 });
 
+export const unreserveRocket = (id) => ({
+  type: UNRESERVE_ROCKET,
+  payload: id,
+});
+
 export const Fetchdragon = () => (dispatch) => {
   const List = [];
   fetch(url, {
