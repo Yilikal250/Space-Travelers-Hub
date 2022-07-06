@@ -1,10 +1,19 @@
 const url = 'https://api.spacexdata.com/v3/missions';
 const GETMISSION = 'Space-Travelers-Hub22/Missions/GETMISSION';
-
+const JOINMISSION = 'Space-Travelers-Hub22/Missions/JOINMISSION';
+const LEAVEMISSION = 'Space-Travelers-Hub22/Missions/LEAVEMISSION';
 function MissionsReducer(state = [], action) {
   switch (action.type) {
     case GETMISSION:
       return [...action.missions];
+    case JOINMISSION:
+      return state.map((item) => (
+        item.id === action.payload ? { ...item, joined: true } : item
+      ));
+    case LEAVEMISSION:
+      return state.map((item) => (
+        item.id === action.payload ? { ...item, joined: false } : item
+      ));
     default:
       return state;
   }
@@ -13,6 +22,16 @@ function MissionsReducer(state = [], action) {
 const GetMission = (missions) => ({
   type: GETMISSION,
   missions,
+});
+
+export const joinMission = (id) => ({
+  type: JOINMISSION,
+  payload: id,
+});
+
+export const leaveMission = (id) => ({
+  type: LEAVEMISSION,
+  payload: id,
 });
 
 export const FetchMission = () => (dispatch) => {
