@@ -38,12 +38,18 @@ export default function Missions() {
               <td className="missionTitle"><h1>{mission.name}</h1></td>
               <td className="mission-description"><p>{mission.description}</p></td>
               <td className="missionStatus">
-                <button className="notMember" type="button" onClick={() => handleJoin(mission.id)} disabled>NOT A MEMBER</button>
-                <button className="member" type="button" onClick={() => handleLeave(mission.id)} disabled>Active Member</button>
+                { mission.joined ? (
+                  <button className="member" type="button" onClick={() => handleLeave(mission.id)} disabled>Active Member</button>
+                ) : (
+                  <button className="notMember" type="button" onClick={() => handleJoin(mission.id)} disabled>NOT A MEMBER</button>
+                ) }
               </td>
               <td>
-                <button className="leave" type="button" onClick={() => handleLeave(mission.id)}>Leave Mission</button>
-                <button className="join" type="button" onClick={() => handleJoin(mission.id)}>Join Mission</button>
+                { mission.joined ? (
+                  <button className="leave" type="button" onClick={() => handleLeave(mission.id)}>Leave Mission</button>
+                ) : (
+                  <button className="join" type="button" onClick={() => handleJoin(mission.id)}>Join Mission</button>
+                ) }
               </td>
             </tr>
           ))
