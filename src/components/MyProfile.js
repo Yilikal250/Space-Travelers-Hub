@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Missions from './Missions';
 import NavBar from './navbar';
 
 function MyProfile() {
