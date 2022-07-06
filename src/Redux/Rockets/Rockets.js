@@ -1,10 +1,18 @@
 const url = 'https://api.spacexdata.com/v3/rockets';
 const GETROCKET = 'Space-Travelers-Hub22/Rockets/GETROCKET';
+const RESERVEROCKET = 'Space-Travelers-Hub22/Rockets/RESERVEROCKET';
 
 function RocketsReducer(state = [], action) {
   switch (action.type) {
     case GETROCKET:
       return [...action.rockets];
+    case RESERVEROCKET:
+      return state.map((rocket) => {
+        if (rocket.id !== action.rocketReserved) {
+          return rocket;
+        }
+        return { ...rocket, reserved: true };
+      });
     default:
       return state;
   }
@@ -13,6 +21,11 @@ function RocketsReducer(state = [], action) {
 const GetRocket = (rockets) => ({
   type: GETROCKET,
   rockets,
+});
+
+export const ReserveRocket = (id) => ({
+  type: RESERVEROCKET,
+  rocketReserved: id,
 });
 
 export const FetchRocket = () => (dispatch) => {
@@ -31,7 +44,6 @@ export const FetchRocket = () => (dispatch) => {
           id: element[1].id,
           name: element[1].rocket_name,
           description: element[1].description,
-          type: element[1].engines.type,
           img: element[1].flickr_images[0],
         });
       });
