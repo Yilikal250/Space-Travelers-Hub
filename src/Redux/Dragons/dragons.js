@@ -30,8 +30,8 @@ export const reserveDragon = (id) => ({
   payload: id,
 });
 
-export const unreserveRocket = (id) => ({
-  type: UNRESERVE_ROCKET,
+export const unreserveDragon = (id) => ({
+  type: UNRESERVE_DRAGON,
   payload: id,
 });
 
