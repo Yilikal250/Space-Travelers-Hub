@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { FetchMission, joinMission, leaveMission } from '../../Redux/Missions/Missions';
+import './Missions.css';
 
 export default function Missions() {
   const missions = useSelector((state) => state.missions);
