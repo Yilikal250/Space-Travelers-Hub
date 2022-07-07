@@ -28,19 +28,14 @@
   padding-right: 1rem;
 }
 
-.navBar a {
+.linkActive {
   color: #00f;
-  text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 2px;
-  transition: background-size 0.3s;
+  text-decoration: underline;
 }
 
-.navBar a:hover,
-.navBar a:focus {
-  background-size: 100% 2px;
+.link {
+  color: #00f;
+  text-decoration: none;
 }
 
 .list-container {

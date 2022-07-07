@@ -11,10 +11,10 @@ export default function NavBar() {
           <h1>Space Travelers&apos; Hub</h1>
         </div>
         <nav className="navBar">
-          <NavLink to="/">Rockets</NavLink>
-          <NavLink to="/missions">Missions</NavLink>
-          <NavLink to="/dragons">Dragons</NavLink>
-          <NavLink to="/myprofile">MyProfile</NavLink>
+          <NavLink className={({ isActive }) => (isActive ? 'linkActive' : 'link')} to="/">Rockets</NavLink>
+          <NavLink className={({ isActive }) => (isActive ? 'linkActive' : 'link')} to="/missions">Missions</NavLink>
+          <NavLink className={({ isActive }) => (isActive ? 'linkActive' : 'link')} to="/dragons">Dragons</NavLink>
+          <NavLink className={({ isActive }) => (isActive ? 'linkActive' : 'link')} to="/myprofile">MyProfile</NavLink>
         </nav>
       </header>
       <div className="line" />
