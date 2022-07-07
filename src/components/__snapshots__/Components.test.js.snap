@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Test Dragons Render 1`] = `
+<div>
+  <ul
+    className="dragons"
+  />
+</div>
+`;
+
+exports[`Components Test Missions Render 1`] = `
+<div>
+  <table
+    className="mission-container"
+  >
+    <thead>
+      <tr
+        className="tableHead"
+      >
+        <td
+          className="missionTitle"
+        >
+          <h1>
+            Mision
+          </h1>
+        </td>
+        <td
+          className="mission-description"
+        >
+          <h1>
+            Description
+          </h1>
+        </td>
+        <td
+          className="missionStatus"
+        >
+          <h1
+            className="status"
+          >
+            Status
+          </h1>
+        </td>
+        <td />
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`Components Test NavBar Render 1`] = `
+Array [
+  <header
+    className="navigation"
+  >
+    <div
+      className="header"
+    >
+      <img
+        alt="logo"
+        src="planet.png"
+      />
+      <h1>
+        Space Travelers' Hub
+      </h1>
+    </div>
+    <nav
+      className="navBar"
+    >
+      <a
+        aria-current="page"
+        className="active"
+        href="/"
+        onClick={[Function]}
+      >
+        Rockets
+      </a>
+      <a
+        className=""
+        href="/missions"
+        onClick={[Function]}
+      >
+        Missions
+      </a>
+      <a
+        className=""
+        href="/dragons"
+        onClick={[Function]}
+      >
+        Dragons
+      </a>
+      <a
+        className=""
+        href="/myprofile"
+        onClick={[Function]}
+      >
+        MyProfile
+      </a>
+    </nav>
+  </header>,
+  <div
+    className="line"
+  />,
+]
+`;
+
+exports[`Components Test Rockets Render 1`] = `
+<div>
+  <ul
+    className="rockets"
+  />
+</div>
+`;
