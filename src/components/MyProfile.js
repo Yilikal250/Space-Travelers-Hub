@@ -20,15 +20,18 @@ function MyProfile() {
           ))}
         </div>
       </div>
-
-      <h1>My Dragons</h1>
-      <div>
-        {dragonList.map((item) => (
-          <div className="dragons-myprofile-item" key={item.id}>
-            <p>{item.name}</p>
-          </div>
-        ))}
+      <div className="dragons-myprofile">
+        <h1>My Dragons</h1>
+        <div>
+          {dragonList.map((item) => (
+            <div className="dragons-myprofile-item" key={item.id}>
+              <p>{item.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
 }
+
+export default MyProfile;
