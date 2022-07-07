@@ -10,24 +10,29 @@ function MyProfile() {
   return (
     <>
       <NavBar />
-      <div className="mission-myprofile">
-        <h1>My Missions</h1>
-        <div>
-          {missionList.map((item) => (
-            <div className="mission-myprofile-item" key={item.id}>
-              <p>{item.name}</p>
-            </div>
-          ))}
+      <div className="list-container">
+        <div className="rocket-myprofile">
+          {/* Here rockets list */}
         </div>
-      </div>
-      <div className="dragons-myprofile">
-        <h1>My Dragons</h1>
-        <div>
-          {dragonList.map((item) => (
-            <div className="dragons-myprofile-item" key={item.id}>
-              <p>{item.name}</p>
-            </div>
-          ))}
+        <div className="mission-myprofile">
+          <h1>My Missions</h1>
+          <div>
+            {missionList.map((item) => (
+              <div className="mission-myprofile-item" key={item.id}>
+                <p>{item.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="dragons-myprofile">
+          <h1>My Dragons</h1>
+          <div>
+            {dragonList.map((item) => (
+              <div className="dragons-myprofile-item" key={item.id}>
+                <p>{item.name}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
