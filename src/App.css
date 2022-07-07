@@ -42,3 +42,16 @@
   grid-template-columns: repeat(3, auto);
   margin: 1rem;
 }
+
+.rockets-myprofile-item,
+.mission-myprofile-item,
+.dragons-myprofile-item {
+  border: solid 1px #e0e0e0;
+  padding: 15px;
+}
+
+.rocket-myprofile,
+.mission-myprofile,
+.dragons-myprofile {
+  margin: 10px;
+}
