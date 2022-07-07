@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import NavBar from '../navbar';
 
 function MyProfile() {
   const missions = useSelector((state) => state.missions);
@@ -11,8 +10,7 @@ function MyProfile() {
   const rocketList = rockets.filter((item) => item.reserved === true);
 
   return (
-    <>
-      <NavBar />
+    <div className="list-conatiner">
       <div className="list-container">
         <div className="rocket-myprofile">
           <h1>My Rockets</h1>
@@ -43,7 +41,7 @@ function MyProfile() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

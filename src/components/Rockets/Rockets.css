@@ -1,7 +1,3 @@
-.rocketTitle {
-  margin: 1rem;
-}
-
 .rockets {
   display: flex;
   flex-direction: column;

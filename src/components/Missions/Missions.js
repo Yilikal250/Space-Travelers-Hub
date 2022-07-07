@@ -1,7 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { FetchMission, joinMission, leaveMission } from '../../Redux/Missions/Missions';
-import Mission from './mission';
-import NavBar from '../navbar';
 
 export default function Missions() {
   const missions = useSelector((state) => state.missions);
@@ -19,9 +17,6 @@ export default function Missions() {
   }
   return (
     <div>
-      <NavBar />
-      <h1>Missions</h1>
-      <Mission />
       <table className="mission-container">
         <thead>
           <tr className="tableHead">

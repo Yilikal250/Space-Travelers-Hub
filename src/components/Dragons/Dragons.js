@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Fetchdragon, reserveDragon, unreserveDragon } from '../../Redux/Dragons/dragons';
-import NavBar from '../navbar';
 import Dragon from './Dragon';
 
 export default function Dragons() {
@@ -21,7 +20,6 @@ export default function Dragons() {
 
   return (
     <div>
-      <NavBar />
       <ul className="dragons">
         {
           dragons.map((dragon) => (

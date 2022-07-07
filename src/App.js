@@ -4,10 +4,12 @@ import MyProfile from './components/MyProfile/MyProfile';
 import Missions from './components/Missions/Missions';
 import Rockets from './components/Rockets/Rockets';
 import Dragons from './components/Dragons/Dragons';
+import NavBar from './components/navbar';
 
 function App() {
   return (
     <div>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Rockets />} />
         <Route path="/missions" element={<Missions />} />
