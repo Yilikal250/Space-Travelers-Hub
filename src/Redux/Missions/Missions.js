@@ -47,7 +47,7 @@ export const FetchMission = () => (dispatch) => {
       const Data = Object.entries(result);
       Data.forEach((element) => {
         List.push({
-          id: element[1].id,
+          id: element[1].mission_id,
           name: element[1].mission_name,
           description: element[1].description,
         });

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './Dragons.css';
 
 function Dragon(props) {
   const {
@@ -6,9 +7,9 @@ function Dragon(props) {
   } = props;
 
   return (
-    <div className="dragon-container" id={id}>
-      <img src={img} alt="dragon" />
-      <h3>{name}</h3>
+    <div className="dragon-info" id={id}>
+      <img src={img} alt="dragon" className="imgDragon" />
+      <h2 className="dragon-name">{name}</h2>
     </div>
   );
 }

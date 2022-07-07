@@ -3,7 +3,7 @@ import './App.css';
 import MyProfile from './components/MyProfile';
 import Missions from './components/Missions';
 import Rockets from './components/Rockets/Rockets';
-import Dragons from './components/Dragons';
+import Dragons from './components/Dragons/Dragons';
 
 function App() {
   return (
