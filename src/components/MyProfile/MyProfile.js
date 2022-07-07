@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import NavBar from './navbar';
+import NavBar from '../navbar';
 
 function MyProfile() {
   const missions = useSelector((state) => state.missions);

@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { FetchMission, joinMission, leaveMission } from '../Redux/Missions/Missions';
+import { FetchMission, joinMission, leaveMission } from '../../Redux/Missions/Missions';
 import Mission from './mission';
-import NavBar from './navbar';
+import NavBar from '../navbar';
 
 export default function Missions() {
   const missions = useSelector((state) => state.missions);
