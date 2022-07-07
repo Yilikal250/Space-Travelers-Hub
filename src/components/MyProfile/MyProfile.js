@@ -1,18 +1,26 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import NavBar from './navbar';
+import NavBar from '../navbar';
 
 function MyProfile() {
   const missions = useSelector((state) => state.missions);
   const missionList = missions.filter((item) => item.joined === true);
   const dragon = useSelector((state) => state.dragons);
   const dragonList = dragon.filter((item) => item.reserved === true);
+  const rockets = useSelector((state) => state.rockets);
+  const rocketList = rockets.filter((item) => item.reserved === true);
+
   return (
     <>
       <NavBar />
       <div className="list-container">
         <div className="rocket-myprofile">
-          {/* Here rockets list */}
+          <h1>My Rockets</h1>
+          {rocketList.map((item) => (
+            <div className="rockets-myprofile-item" key={item.id}>
+              <p>{item.name}</p>
+            </div>
+          ))}
         </div>
         <div className="mission-myprofile">
           <h1>My Missions</h1>

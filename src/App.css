@@ -34,4 +34,5 @@
 .list-container {
   display: grid;
   grid-template-columns: repeat(3, auto);
+  margin: 1rem;
 }
